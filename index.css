@@ -8,32 +8,58 @@ body {
   background-size: cover;
   background-repeat: repeat-y;
 }
+.rem__cards {
+  color: #fff;
+  margin-left: 1rem;
+}
+#winner__notification {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  background-color: #000;
+  color: #ffff00;
+  transition: top 300ms ease-in-out;
+  border-radius: 12px;
+  font-weight: 700;
+}
 #new-deck,
 #draw-cards {
   padding: 0.5rem;
-  background-color: yellow;
+  background-color: #ffff00;
   border: none;
-  margin-top: 5px;
   font-weight: 700;
   cursor: pointer;
+  margin: 0;
+  width: 100%;
+  height: 80px;
+  font-size: 2rem;
+  text-transform: uppercase;
+  transition: background-color 300ms ease-in-out;
 }
-#new-deck {
-  margin-left: 5px;
+#new-deck:hover,
+#new-deck:active,
+#draw-cards:hover,
+#draw-cards:active {
+  background-color: #dddd0a;
 }
 #draw-cards {
-  height: 50px;
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
 }
 #cards {
-  height: 80vh;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
   text-align: center;
+}
+#computer,
+#me {
+  color: #fff;
 }
 .card__name {
   font-weight: 700;
@@ -41,7 +67,7 @@ body {
 }
 .card1 p,
 .card2 p {
-  color: yellow;
+  color: #fff;
 }
 
 #cards img {
@@ -49,26 +75,37 @@ body {
   /* transform: skew(10deg, 1deg); */
   /* animation: skewIt 1s ease-in 0.5s alternate-reverse infinite; */
 }
-@keyframes skewIt {
+/* @keyframes skewIt {
   from {
     transform: skew(10deg, 1deg);
   }
   to {
     transform: skew(10deg, 5deg);
   }
-}
+} */
 
 @media (max-width: 500px) {
+  body .rem__cards {
+    font-size: 1.4rem;
+  }
   #cards {
-    flex-direction: column;
     height: auto;
     margin: 1rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
   }
-  .card1 p {
-    margin-bottom: 0;
+  #cards .card__name {
+    font-size: small;
   }
   #cards img {
     height: 200px;
+  }
+}
+@media (max-width: 350px) {
+  #cards img {
+    height: 150px;
+  }
+  #computer,
+  #me {
+    font-size: 1.5rem;
   }
 }
