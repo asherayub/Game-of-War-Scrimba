@@ -1,0 +1,74 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: url("./img/table.png");
+  background-size: cover;
+  background-repeat: repeat-y;
+}
+#new-deck,
+#draw-cards {
+  padding: 0.5rem;
+  background-color: yellow;
+  border: none;
+  margin-top: 5px;
+  font-weight: 700;
+  cursor: pointer;
+}
+#new-deck {
+  margin-left: 5px;
+}
+#draw-cards {
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+#cards {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+.card__name {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.card1 p,
+.card2 p {
+  color: yellow;
+}
+
+#cards img {
+  height: 250px;
+  /* transform: skew(10deg, 1deg); */
+  /* animation: skewIt 1s ease-in 0.5s alternate-reverse infinite; */
+}
+@keyframes skewIt {
+  from {
+    transform: skew(10deg, 1deg);
+  }
+  to {
+    transform: skew(10deg, 5deg);
+  }
+}
+
+@media (max-width: 500px) {
+  #cards {
+    flex-direction: column;
+    height: auto;
+    margin: 1rem;
+    margin-top: 3rem;
+  }
+  .card1 p {
+    margin-bottom: 0;
+  }
+  #cards img {
+    height: 200px;
+  }
+}
