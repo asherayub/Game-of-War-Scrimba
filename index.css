@@ -61,13 +61,13 @@ body {
 #me {
   color: #fff;
 }
-.card__name {
-  font-weight: 700;
-  font-size: 1.2rem;
-}
 .card1 p,
 .card2 p {
   color: #fff;
+}
+.card__name {
+  font-weight: 700;
+  font-size: 1.2rem;
 }
 
 #cards img {
