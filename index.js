@@ -27,8 +27,7 @@ document.getElementById("draw-cards").addEventListener("click", () => {
   fetch(`https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=2`)
     .then((res) => res.json())
     .then((data) => {
-      document.getElementById("remaining__cards").textContent =
-          data.remaining;
+      document.getElementById("remaining__cards").textContent = data.remaining;
       if (deckId == undefined) {
         alert("Please get New Deck First");
         return;
@@ -47,10 +46,11 @@ document.getElementById("draw-cards").addEventListener("click", () => {
         </div>
       `;
         winner(data.cards[0], data.cards[1]);
-        
       } else {
         document.querySelector("#cards").innerHTML = `
-          <h1 style="font-size: 2.5rem; padding: 1rem; text-align: center; background-color: yellow;">Draw New Deck!</h1>
+          <h1 style="font-size: 2.5rem; padding: 1rem; text-align: center; background-color: yellow;">${
+            myScore > comScore ? "You Win the Game" : "COM Win the Game"
+          } <br/> Draw New Deck from Button on Top </h1>
         `;
       }
     });
