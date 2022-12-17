@@ -1,4 +1,4 @@
-# Game of War / Deck of Cards
+# Game of War / Deck of Cards in JavaScript
 ## Features
 - Get a new deck.
 - Keeps track of remaining cards.
